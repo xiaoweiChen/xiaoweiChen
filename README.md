@@ -1,6 +1,6 @@
-[![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+[![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Concurrency-with-Modern-Cpp)](https://github.com/anuraghazra/github-readme-stats)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Concurrency-with-Modern-Cpp)](https://github.com/xiaoweiChen/Concurrency-with-Modern-Cpp)
 
 
 from: https://github.com/anuraghazra/github-readme-stats
