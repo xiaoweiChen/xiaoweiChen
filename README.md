@@ -1,5 +1,7 @@
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=LLVM-Techniques-Tips-and-Best-Practies)[https://github.com/xiaoweiChen/LLVM-Techniques-Tips-and-Best-Practies]
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Learn-LLVM-12)](https://github.com/xiaoweiChen/Learn-LLVM-12)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=CPP-Move-Semantics)](https://github.com/xiaoweiChen/CPP-Move-Semantics)
