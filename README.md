@@ -1,5 +1,7 @@
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Cpp-Templates-2nd)](https://github.com/xiaoweiChen/Cpp-Templates-2nd)
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Software-Architecture-with-Cpp)](https://github.com/xiaoweiChen/Software-Architecture-with-Cpp)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=The-Art-of-Writing-Efficient-Programs)](https://github.com/xiaoweiChen/The-Art-of-Writing-Efficient-Programs)
