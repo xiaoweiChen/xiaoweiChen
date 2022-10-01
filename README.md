@@ -1,4 +1,7 @@
+
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=CMake-Best-Practices)](https://github.com/xiaoweiChen/CMake-Best-Practices)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Cpp-Templates-2nd)](https://github.com/xiaoweiChen/Cpp-Templates-2nd)
 
