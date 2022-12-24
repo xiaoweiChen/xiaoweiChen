@@ -1,6 +1,8 @@
 
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=CPP-20-STL-Cookbook)](https://github.com/xiaoweiChen/CPP-20-STL-Cookbook)
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Modern-CMake-for-Cpp)](https://github.com/xiaoweiChen/Modern-CMake-for-Cpp)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=CMake-Best-Practices)](https://github.com/xiaoweiChen/CMake-Best-Practices)
