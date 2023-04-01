@@ -1,7 +1,7 @@
 
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Template-Metaprogramming-with-CPP)]([https://github.com/xiaoweiChen/CXX20-Get-Details](https://github.com/xiaoweiChen/Template-Metaprogramming-with-CPP))
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Template-Metaprogramming-with-CPP)](https://github.com/xiaoweiChen/Template-Metaprogramming-with-CPP)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=CXX20-Get-Details)](https://github.com/xiaoweiChen/CXX20-Get-Details)
 
