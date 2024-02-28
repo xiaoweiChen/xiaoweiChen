@@ -1,6 +1,7 @@
 
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Learn-LLVM-17)](https://github.com/xiaoweiChen/Learn-LLVM-17)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=The-CXX-Library-Fourth-Edition-include-CXX23)](https://github.com/xiaoweiChen/The-CXX-Library-Fourth-Edition-include-CXX23)
 
