@@ -1,6 +1,9 @@
 
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Modern-CMake-for-Cpp-2ed)](https://github.com/xiaoweiChen/Modern-CMake-for-Cpp-2ed)
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Clang-Compiler-Frontend)](https://github.com/xiaoweiChen/Clang-Compiler-Frontend)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Professional-cpp-6ed)](https://github.com/xiaoweiChen/Professional-cpp-6ed)
