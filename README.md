@@ -1,6 +1,8 @@
 
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Asynchronous-Programming-with-Cpp)](https://github.com/xiaoweiChen/Asynchronous-Programming-with-Cpp)
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Modern-CXX-Programming-Cookbook)](https://github.com/xiaoweiChen/Modern-CXX-Programming-Cookbook)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Modern-CMake-for-Cpp-2ed)](https://github.com/xiaoweiChen/Modern-CMake-for-Cpp-2ed)
