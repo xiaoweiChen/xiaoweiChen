@@ -1,6 +1,8 @@
 
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Refactoring-with-Cpp)](https://github.com/xiaoweiChen/Refactoring-with-Cpp)
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=100-Cpp-Mistakes-and-How-to-Avoid-Them)](https://github.com/xiaoweiChen/100-Cpp-Mistakes-and-How-to-Avoid-Them)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Performance-Analysis-and-Tuning-on-Modern-CPUS-2ed)](https://github.com/xiaoweiChen/Performance-Analysis-and-Tuning-on-Modern-CPUS-2ed)
