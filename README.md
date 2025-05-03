@@ -1,6 +1,8 @@
 
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=GitHub-Actions-Cookbook)](https://github.com/xiaoweiChen/GitHub-Actions-Cookbook)
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Refactoring-with-Cpp)](https://github.com/xiaoweiChen/Refactoring-with-Cpp)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=100-Cpp-Mistakes-and-How-to-Avoid-Them)](https://github.com/xiaoweiChen/100-Cpp-Mistakes-and-How-to-Avoid-Them)
