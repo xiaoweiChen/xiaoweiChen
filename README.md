@@ -1,5 +1,5 @@
 
-[![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical)](https://github.com/xiaoweiChen)
+[![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical&rank_icon=percentile )](https://github.com/xiaoweiChen)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=GitHub-Actions-Cookbook)](https://github.com/xiaoweiChen/GitHub-Actions-Cookbook)
 
