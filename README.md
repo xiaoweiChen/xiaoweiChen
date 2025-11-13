@@ -1,6 +1,8 @@
 
 [![xiaowei's github stats](https://github-readme-stats.vercel.app/api?username=xiaoweiChen&show_icons=true&theme=radical&rank_icon=percentile )](https://github.com/xiaoweiChen)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Cpp23-Best-Practices)](https://github.com/xiaoweiChen/Cpp23-Best-Practices)
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Hands-On-Design-Patterns-with-Cpp)](https://github.com/xiaoweiChen/Hands-On-Design-Patterns-with-Cpp)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xiaoweiChen&repo=Cpp-Memory-Management)](https://github.com/xiaoweiChen/Cpp-Memory-Management)
