@@ -71,44 +71,25 @@ jobs:
             --output profile/top-langs.svg \
             "${STATS_BASE_URL}/api/top-langs/"
 
-          repos=(
-            "Building-Programming-Language-Interpreters"
-            "Beyond-Vibe-Coding"
-            "Cpp23-Best-Practices"
-            "Hands-On-Design-Patterns-with-Cpp"
-            "Cpp-Memory-Management"
-            "Debunking-Cpp-Myths"
-            "GitHub-Actions-Cookbook"
-            "Refactoring-with-Cpp"
-            "100-Cpp-Mistakes-and-How-to-Avoid-Them"
-            "Performance-Analysis-and-Tuning-on-Modern-CPUS-2ed"
-            "Asynchronous-Programming-with-Cpp"
-            "Modern-CXX-Programming-Cookbook"
-            "Modern-CMake-for-Cpp-2ed"
-            "Clang-Compiler-Frontend"
-            "Professional-cpp-6ed"
-            "Learn-LLVM-17"
-            "The-CXX-Library-Fourth-Edition-include-CXX23"
-            "CXX20-The-Complete-Guide"
-            "Template-Metaprogramming-with-CPP"
-            "CXX20-Get-Details"
-            "CPP-20-STL-Cookbook"
-            "Modern-CMake-for-Cpp"
-            "CMake-Best-Practices"
-            "Cpp-Templates-2nd"
-            "Software-Architecture-with-Cpp"
-            "The-Art-of-Writing-Efficient-Programs"
-            "LLVM-Techniques-Tips-and-Best-Practies"
-            "Learn-LLVM-12"
-            "CPP-Move-Semantics"
-            "Data-Paralle-Cpp"
-            "Expert-Cpp"
-            "Concurrency-with-Modern-Cpp"
-            "CPP-17-STL-cookbook"
-            "CMake-Cookbook"
-            "CPP-Concurrency-In-Action-2ed-2019"
-            "Heterogeneous-Computing-with-OpenCL-2.0"
-            "Cpp_Concurrency_In_Action"
+          # Keep README.md as the source of truth for pinned repository cards.
+          mapfile -t repos < <(
+            python3 - <<'PY'
+          import re
+          import sys
+
+          readme = open("README.md", encoding="utf-8").read()
+          repos = re.findall(r"\./profile/repos/([A-Za-z0-9._-]+)\.svg", readme)
+
+          seen = set()
+          for repo in repos:
+              if repo in seen:
+                  continue
+              seen.add(repo)
+              print(repo)
+
+          if not seen:
+              print("No pinned repository card references found in README.md.", file=sys.stderr)
+          PY
           )
 
           for repo in "${repos[@]}"; do
