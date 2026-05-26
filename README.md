@@ -1,5 +1,5 @@
 ![Stats](./profile/stats.svg)
-![Top Languages](./profile/top-langs.svg)
+<!--![Top Languages](./profile/top-langs.svg)-->
 
 [![Building-Programming-Language-Interpreters](./profile/repos/Building-Programming-Language-Interpreters.svg)](https://github.com/xiaoweiChen/Building-Programming-Language-Interpreters)
 
