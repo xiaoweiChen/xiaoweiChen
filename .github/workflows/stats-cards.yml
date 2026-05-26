@@ -12,37 +12,118 @@ jobs:
     permissions:
       contents: write
 
+    env:
+      STATS_BASE_URL: http://127.0.0.1:9000
+      STATS_IMAGE: ghcr.io/fim-sh/github-readme-stats-docker:latest
+
     steps:
       - uses: actions/checkout@v6
 
-      - name: Generate stats card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate README cards
+        env:
+          PAT_1: ${{ secrets.README_STATS_PAT }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
 
-      - name: Generate top languages card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
-          path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          if [ -z "${PAT_1}" ]; then
+            echo "::error::Set the README_STATS_PAT repository secret before running this workflow."
+            exit 1
+          fi
 
-      - name: Generate pin card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=stats-organization&repo=github-readme-stats
-          path: profile/pin-stats-organization-github-readme-stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          docker run --detach \
+            --name github-readme-stats \
+            --publish 127.0.0.1:9000:9000 \
+            --env PAT_1 \
+            --env WHITELIST="${OWNER}" \
+            --env CACHE_SECONDS="86400" \
+            "${STATS_IMAGE}"
+
+          trap 'docker rm --force github-readme-stats >/dev/null 2>&1 || true' EXIT
+
+          for attempt in {1..30}; do
+            if curl --fail --silent "${STATS_BASE_URL}/api?username=${OWNER}" >/dev/null; then
+              break
+            fi
+
+            if [ "${attempt}" -eq 30 ]; then
+              docker logs github-readme-stats
+              exit 1
+            fi
+
+            sleep 2
+          done
+
+          mkdir -p profile/repos
+
+          curl --get --fail --silent --show-error --retry 3 --retry-delay 5 \
+            --data-urlencode "username=${OWNER}" \
+            --data-urlencode "show_icons=true" \
+            --data-urlencode "theme=radical" \
+            --data-urlencode "rank_icon=percentile" \
+            --output profile/stats.svg \
+            "${STATS_BASE_URL}/api"
+
+          curl --get --fail --silent --show-error --retry 3 --retry-delay 5 \
+            --data-urlencode "username=${OWNER}" \
+            --data-urlencode "layout=compact" \
+            --data-urlencode "langs_count=6" \
+            --output profile/top-langs.svg \
+            "${STATS_BASE_URL}/api/top-langs/"
+
+          repos=(
+            "Building-Programming-Language-Interpreters"
+            "Beyond-Vibe-Coding"
+            "Cpp23-Best-Practices"
+            "Hands-On-Design-Patterns-with-Cpp"
+            "Cpp-Memory-Management"
+            "Debunking-Cpp-Myths"
+            "GitHub-Actions-Cookbook"
+            "Refactoring-with-Cpp"
+            "100-Cpp-Mistakes-and-How-to-Avoid-Them"
+            "Performance-Analysis-and-Tuning-on-Modern-CPUS-2ed"
+            "Asynchronous-Programming-with-Cpp"
+            "Modern-CXX-Programming-Cookbook"
+            "Modern-CMake-for-Cpp-2ed"
+            "Clang-Compiler-Frontend"
+            "Professional-cpp-6ed"
+            "Learn-LLVM-17"
+            "The-CXX-Library-Fourth-Edition-include-CXX23"
+            "CXX20-The-Complete-Guide"
+            "Template-Metaprogramming-with-CPP"
+            "CXX20-Get-Details"
+            "CPP-20-STL-Cookbook"
+            "Modern-CMake-for-Cpp"
+            "CMake-Best-Practices"
+            "Cpp-Templates-2nd"
+            "Software-Architecture-with-Cpp"
+            "The-Art-of-Writing-Efficient-Programs"
+            "LLVM-Techniques-Tips-and-Best-Practies"
+            "Learn-LLVM-12"
+            "CPP-Move-Semantics"
+            "Data-Paralle-Cpp"
+            "Expert-Cpp"
+            "Concurrency-with-Modern-Cpp"
+            "CPP-17-STL-cookbook"
+            "CMake-Cookbook"
+            "CPP-Concurrency-In-Action-2ed-2019"
+            "Heterogeneous-Computing-with-OpenCL-2.0"
+            "Cpp_Concurrency_In_Action"
+          )
+
+          for repo in "${repos[@]}"; do
+            curl --get --fail --silent --show-error --retry 3 --retry-delay 5 \
+              --data-urlencode "username=${OWNER}" \
+              --data-urlencode "repo=${repo}" \
+              --output "profile/repos/${repo}.svg" \
+              "${STATS_BASE_URL}/api/pin/"
+          done
 
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg
-          git commit -m "Update README cards" || exit 0
+          git add profile
+          git diff --cached --quiet && exit 0
+          git commit -m "Update README cards"
           git push
