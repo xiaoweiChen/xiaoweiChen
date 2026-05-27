@@ -98,6 +98,19 @@
         >
           
     
+  <g data-testid="badge" class="badge" transform="translate(320, -18)">
+    <rect stroke="#434d58" stroke-width="1" width="70" height="20" x="-12" y="-14" ry="10" rx="10"></rect>
+    <text
+      x="23" y="-5"
+      alignment-baseline="central"
+      dominant-baseline="central"
+      text-anchor="middle"
+      fill="#434d58"
+    >
+      Archived
+    </text>
+  </g>
+
 
     <text class="description" x="25" y="-5">
       <tspan dy="1.2em" x="25">&#12298;C++23 Best</tspan><tspan dy="1.2em" x="25">Practices&#12299;&#30340;&#38750;&#19987;&#19994;&#20010;&#20154;&#32763;&#35793;</tspan>
