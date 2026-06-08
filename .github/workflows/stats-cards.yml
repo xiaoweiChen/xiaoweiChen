@@ -4,107 +4,40 @@ on:
   schedule:
     - cron: "0 0 * * *" # Runs once daily at midnight
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+      - 'scripts/generate_repo_cards.py'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
-    env:
-      STATS_BASE_URL: http://127.0.0.1:9000
-      STATS_IMAGE: ghcr.io/fim-sh/github-readme-stats-docker:latest
-
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Generate README cards
-        env:
-          PAT_1: ${{ secrets.README_STATS_PAT }}
-          OWNER: ${{ github.repository_owner }}
+      - name: Generate stats cards
+        uses: anuraghazra/github-readme-stats@master
+        with:
+          username: xiaoweiChen
+
+      - name: Move generated cards
         run: |
-          set -euo pipefail
-
-          if [ -z "${PAT_1}" ]; then
-            echo "::error::Set the README_STATS_PAT repository secret before running this workflow."
-            exit 1
-          fi
-
-          docker run --detach \
-            --name github-readme-stats \
-            --publish 127.0.0.1:9000:9000 \
-            --env PAT_1 \
-            --env WHITELIST="${OWNER}" \
-            --env CACHE_SECONDS="86400" \
-            "${STATS_IMAGE}"
-
-          trap 'docker rm --force github-readme-stats >/dev/null 2>&1 || true' EXIT
-
-          for attempt in {1..30}; do
-            if curl --fail --silent "${STATS_BASE_URL}/api?username=${OWNER}" >/dev/null; then
-              break
-            fi
-
-            if [ "${attempt}" -eq 30 ]; then
-              docker logs github-readme-stats
-              exit 1
-            fi
-
-            sleep 2
-          done
-
           mkdir -p profile/repos
+          mv *.svg profile/repos/ || true
 
-          curl --get --fail --silent --show-error --retry 3 --retry-delay 5 \
-            --data-urlencode "username=${OWNER}" \
-            --data-urlencode "show_icons=true" \
-            --data-urlencode "theme=radical" \
-            --data-urlencode "rank_icon=percentile" \
-            --output profile/stats.svg \
-            "${STATS_BASE_URL}/api"
-
-          curl --get --fail --silent --show-error --retry 3 --retry-delay 5 \
-            --data-urlencode "username=${OWNER}" \
-            --data-urlencode "layout=compact" \
-            --data-urlencode "langs_count=6" \
-            --output profile/top-langs.svg \
-            "${STATS_BASE_URL}/api/top-langs/"
-
-          # Keep README.md as the source of truth for pinned repository cards.
-          mapfile -t repos < <(
-            python3 - <<'PY'
-          import re
-          import sys
-
-          readme = open("README.md", encoding="utf-8").read()
-          repos = re.findall(r"\./profile/repos/([A-Za-z0-9._-]+)\.svg", readme)
-
-          seen = set()
-          for repo in repos:
-              if repo in seen:
-                  continue
-              seen.add(repo)
-              print(repo)
-
-          if not seen:
-              print("No pinned repository card references found in README.md.", file=sys.stderr)
-          PY
-          )
-
-          for repo in "${repos[@]}"; do
-            curl --get --fail --silent --show-error --retry 3 --retry-delay 5 \
-              --data-urlencode "username=${OWNER}" \
-              --data-urlencode "repo=${repo}" \
-              --output "profile/repos/${repo}.svg" \
-              "${STATS_BASE_URL}/api/pin/"
-          done
+      - name: Update README repo cards
+        run: python scripts/generate_repo_cards.py
 
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile
+          git add profile README.md
+          # 仅当有实际变更时才提交，避免空提交触发循环
           git diff --cached --quiet && exit 0
-          git commit -m "Update README cards"
+          git commit -m "Update README cards and repo links"
           git push
