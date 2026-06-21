@@ -1,9 +1,9 @@
 ![Stats](./profile/stats.svg)
 <!--![Top Languages](./profile/top-langs.svg)-->
 
-[![Minimal-CMake](./profile/repos/Minimal-CMake.svg)](https://github.com/xiaoweiChen/Minimal-CMake)
-
 [![Software-Architecture-with-Cpp-Second-Edition](./profile/repos/Software-Architecture-with-Cpp-Second-Edition.svg)](https://github.com/xiaoweiChen/Software-Architecture-with-Cpp-Second-Edition)
+
+[![Minimal-CMake](./profile/repos/Minimal-CMake.svg)](https://github.com/xiaoweiChen/Minimal-CMake)
 
 [![Building-Programming-Language-Interpreters](./profile/repos/Building-Programming-Language-Interpreters.svg)](https://github.com/xiaoweiChen/Building-Programming-Language-Interpreters)
 
