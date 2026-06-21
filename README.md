@@ -3,6 +3,8 @@
 
 [![Minimal-CMake](./profile/repos/Minimal-CMake.svg)](https://github.com/xiaoweiChen/Minimal-CMake)
 
+[![Software-Architecture-with-Cpp-Second-Edition](./profile/repos/Software-Architecture-with-Cpp-Second-Edition.svg)](https://github.com/xiaoweiChen/Software-Architecture-with-Cpp-Second-Edition)
+
 [![Building-Programming-Language-Interpreters](./profile/repos/Building-Programming-Language-Interpreters.svg)](https://github.com/xiaoweiChen/Building-Programming-Language-Interpreters)
 
 [![Beyond-Vibe-Coding](./profile/repos/Beyond-Vibe-Coding.svg)](https://github.com/xiaoweiChen/Beyond-Vibe-Coding)
