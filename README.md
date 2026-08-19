@@ -1,7 +1,7 @@
 ![Stats](./profile/stats.svg)
 <!--![Top Languages](./profile/top-langs.svg)-->
 
-[![Think-Like-a-Software-Engineering-Manager](./profile/repos/Think-Like-a-Software-Engineering-Manager .svg)](https://github.com/xiaoweiChen/Think-Like-a-Software-Engineering-Manager)
+[![Think-Like-a-Software-Engineering-Manager](./profile/repos/Think-Like-a-Software-Engineering-Manager.svg)](https://github.com/xiaoweiChen/Think-Like-a-Software-Engineering-Manager)
 
 [![Software-Architecture-with-Cpp-Second-Edition](./profile/repos/Software-Architecture-with-Cpp-Second-Edition.svg)](https://github.com/xiaoweiChen/Software-Architecture-with-Cpp-Second-Edition)
 
