@@ -1,6 +1,8 @@
 ![Stats](./profile/stats.svg)
 <!--![Top Languages](./profile/top-langs.svg)-->
 
+[![Cpp23-STL-Cookbook](./profile/repos/Cpp23-STL-Cookbook.svg)](https://github.com/xiaoweiChen/Cpp23-STL-Cookbook)
+
 [![The-Complete-Cpp-Programming-Guide-2026](./profile/repos/The-Complete-Cpp-Programming-Guide-2026.svg)](https://github.com/xiaoweiChen/The-Complete-Cpp-Programming-Guide-2026)
 
 [![Think-Like-a-Software-Engineering-Manager](./profile/repos/Think-Like-a-Software-Engineering-Manager.svg)](https://github.com/xiaoweiChen/Think-Like-a-Software-Engineering-Manager)
