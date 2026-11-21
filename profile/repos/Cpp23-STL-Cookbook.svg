@@ -1,8 +1,8 @@
 
       <svg
         width="400"
-        height="120"
-        viewBox="0 0 400 120"
+        height="140"
+        viewBox="0 0 400 140"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
@@ -100,10 +100,10 @@
     
 
     <text class="description" x="25" y="-5">
-      <tspan dy="1.2em" x="25">No description provided</tspan>
+      <tspan dy="1.2em" x="25">&#12298;C++ STL Cookbook, Second</tspan><tspan dy="1.2em" x="25">Edition&#12299;&#30340;&#38750;&#19987;&#19994;&#20010;&#20154;&#32763;&#35793;</tspan>
     </text>
 
-    <g transform="translate(30, 45)">
+    <g transform="translate(30, 65)">
       <g transform="translate(0, 0)">
     <g data-testid="primary-lang">
       <circle data-testid="lang-color" cx="0" cy="-5" r="6" fill="#3D6117" />
