@@ -3,8 +3,6 @@
 
 ----
 
-Wind Fantasy in My memory.
-
 [![Wind-Fantasy-0-infinity](./profile/repos/Wind-Fantasy-0-infinity.svg)](https://github.com/xiaoweiChen/Wind-Fantasy-0-infinity)
 
 ----
